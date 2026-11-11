@@ -9,7 +9,8 @@ collections:
   - name: galeria
     label: "Galería de Fotos"
     files:
-      - file: "content/galeria.json"
+      - name: galeria
+        file: "content/galeria.json"
         label: "Editar Galería"
         fields:
           - name: fotos
