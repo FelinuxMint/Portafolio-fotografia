@@ -9,7 +9,6 @@ collections:
   - name: galeria
     label: "Galería de Fotos"
     file: "content/galeria.json"
-    label: "Galería de Fotos"
     fields:
       - name: fotos
         label: Fotos
