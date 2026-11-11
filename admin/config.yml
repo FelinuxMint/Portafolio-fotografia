@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: galeria
+    label: "Galería de Fotos"
+    file: "content/galeria.json"
+    label: "Galería de Fotos"
+    fields:
+      - name: fotos
+        label: Fotos
+        widget: list
+        allow_add: true
+        allow_delete: true
+        fields:
+          - name: title
+            label: Título
+            widget: string
+          - name: image
+            label: Imagen
+            widget: image
+          - name: description
+            label: Descripción
+            widget: text
+            required: false
+          - name: project_link
+            label: Enlace al proyecto
+            widget: string
+            required: false

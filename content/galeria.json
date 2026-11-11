@@ -1,0 +1,16 @@
+{
+  "fotos": [
+    {
+      "title": "Ejemplo 1",
+      "image": "/images/uploads/ejemplo-1.jpg",
+      "description": "Descripción de ejemplo 1",
+      "project_link": "#"
+    },
+    {
+      "title": "Ejemplo 2",
+      "image": "/images/uploads/ejemplo-2.jpg",
+      "description": "Descripción de ejemplo 2",
+      "project_link": "#"
+    }
+  ]
+}
