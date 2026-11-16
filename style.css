@@ -231,6 +231,26 @@ figcaption p {
     -webkit-backdrop-filter: blur(4px);
   }
 
+  /* Botón de cierre (X) del menú móvil */
+  .nav-close {
+    display: none;
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #111;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  @media (max-width: 768px) {
+    .nav-close {
+      display: block;
+    }
+  }
+
   .nav-menu.active {
     transform: translateX(0);
   }
