@@ -6,30 +6,24 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: galeria
-    label: "Galería de Fotos"
-    files:
-      - name: galeria
-        file: "content/galeria.json"
-        label: "Editar Galería"
+  - name: proyectos
+    label: Proyectos
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: slug, label: Slug (URL), widget: string }
+      - { name: order, label: Orden en galería, widget: number }
+      - { name: description, label: Descripción, widget: text }
+      - { name: featured_image, label: Imagen destacada, widget: image }
+      - name: photos
+        label: Fotos del proyecto
+        widget: list
         fields:
-          - name: fotos
-            label: Fotos
-            widget: list
-            allow_add: true
-            allow_delete: true
-            fields:
-              - name: title
-                label: Título
-                widget: string
-              - name: image
-                label: Imagen
-                widget: image
-              - name: description
-                label: Descripción
-                widget: text
-                required: false
-              - name: project_link
-                label: Enlace al proyecto
-                widget: string
-                required: false
+          - { name: imagen, label: Imagen, widget: image }
+          - { name: titulo, label: Título de la foto, widget: string }

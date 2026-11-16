@@ -1,0 +1,20 @@
+---
+layout: project.njk
+title: Insecto
+slug: insecto
+order: 5
+permalink: insecto.html
+description: "Macrofotografía que revela el mundo diminuto de los insectos: alas, patas y colores iridiscentes en escala reducida."
+featured_image: /images/uploads/foto5.jpg
+photos:
+  - imagen: /images/uploads/foto1.jpg
+    titulo: Insecto 1
+  - imagen: /images/uploads/foto2.jpg
+    titulo: Insecto 2
+  - imagen: /images/uploads/foto3.jpg
+    titulo: Insecto 3
+  - imagen: /images/uploads/foto4.jpg
+    titulo: Insecto 4
+  - imagen: /images/uploads/foto5.jpg
+    titulo: Insecto 5
+---
