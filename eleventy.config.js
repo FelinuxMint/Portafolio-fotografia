@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
   
   // Copiar imágenes y assets estáticos
   eleventyConfig.addPassthroughCopy('images');
+  eleventyConfig.addPassthroughCopy('style.css');
+  eleventyConfig.addPassthroughCopy('script.js');
   
   // Recopilar todos los proyectos para la galería
   eleventyConfig.addCollection('proyectos', function(collection) {
