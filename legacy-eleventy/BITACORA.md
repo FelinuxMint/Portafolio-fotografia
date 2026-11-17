@@ -16,3 +16,23 @@
 - **2026-11-16**: Se crean 5 proyectos en Markdown: Mapache, Reptil, Planta, Peludos, Insecto.
 - **2026-11-16**: Se configura Decap CMS con colección tipo folder para _projects.
 - **2026-11-16**: Se crea BITACORA.md para registrar decisiones y cambios.
+
+## 2026-11-17: Migración a Pages CMS + Eleventy (Alternativa 1)
+
+### Decisiones tomadas
+- Se elimina completamente TinaCMS y Next.js 14 por problemas de compatibilidad y errores de build persistentes.
+- Se mantiene la arquitectura de galería con fotos centradas, overlay blanco translúcido al 30% al hover, y botón 👁 para ver proyecto completo.
+- Se mantiene el diseño visual original: paleta neutra, tipografía system-ui, menú hamburguesa móvil con clase .active.
+- Se crea rama `pagescms` en GitHub para trabajar de forma aislada.
+
+### Cambios efectuados
+- **2026-11-17**: Se eliminan todos los archivos de TinaCMS: `tina/`, `tina.config.ts`, `src/lib/tina.ts`, `src/pages/_app.tsx`, dependencias `tinacms` y `@tinacms/cli`.
+- **2026-11-17**: Se elimina Next.js 14 y se instala Eleventy 3.1.8 como SSG.
+- **2026-11-17**: Se crea `eleventy.config.js` con colecciones para proyectos.
+- **2026-11-17**: Se crea `.pages.yml` con colección de proyectos y páginas estáticas (biografía, contacto, exposiciones).
+- **2026-11-17**: Se crean plantillas Eleventy: `base.njk`, `proyecto.njk`, `pagina.njk`.
+- **2026-11-17**: Se crean 5 proyectos con sus imágenes: Mapache, Reptil, Planta, Peludos, Insecto.
+- **2026-11-17**: Se crean imágenes en `images/uploads/` (copia de las 5 fotos originales).
+- **2026-11-17**: Se crea `style.css` y `script.js` con menú hamburguesa y GLightbox.
+- **2026-11-17**: `legacy-eleventy/` se mantiene intacto como respaldo del trabajo anterior.
+
