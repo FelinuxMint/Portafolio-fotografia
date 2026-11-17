@@ -39,6 +39,11 @@ content:
       - name: title
         label: Título
         type: string
+      - name: body
+        label: Contenido
+        type: rich-text
+        options:
+          format: markdown
   - name: contacto
     label: Contacto
     type: file
@@ -47,6 +52,11 @@ content:
       - name: title
         label: Título
         type: string
+      - name: body
+        label: Contenido
+        type: rich-text
+        options:
+          format: markdown
   - name: exposiciones
     label: Exposiciones
     type: file
@@ -55,3 +65,8 @@ content:
       - name: title
         label: Título
         type: string
+      - name: body
+        label: Contenido
+        type: rich-text
+        options:
+          format: markdown
