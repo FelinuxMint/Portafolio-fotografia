@@ -1,6 +1,8 @@
 ---
+layout: project.njk
 title: Mapache
 slug: mapache
+permalink: mapache.html
 order: 1
 description: Serie fotográfica dedicada a capturar la mirada curiosa y el pelaje
   texturizado del mapache en entornos naturales y urbanos. Junto a Tanuki Chang.
