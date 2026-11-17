@@ -8,12 +8,6 @@ export default defineConfig({
   branch: process.env.NEXT_PUBLIC_TINA_BRANCH || "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
-  media: {
-    tina: {
-      publicFolder: "public",
-      mediaRoot: "uploads",
-    },
-  },
   /**
    * Para habilitar la edición visual localmente, Tina proporciona un componente <Sidebar />
    * que puedes agregar a tu aplicación para abrir el panel de Tina en el navegador.
