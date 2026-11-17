@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["portafolio-estable-2026-11-17"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
