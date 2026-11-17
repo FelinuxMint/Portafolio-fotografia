@@ -10,10 +10,10 @@ permalink: index.html
     <figure class="foto-item">
       <div class="foto-overlay">
         <span class="proyecto-nombre">{{ project.data.title }}</span>
-        <a href="{{ project.url }}" class="btn-ver-proyecto" aria-label="Ver proyecto {{ project.data.title }}">👁</a>
+        <a href="{{ project.url | url }}" class="btn-ver-proyecto" aria-label="Ver proyecto {{ project.data.title }}">👁</a>
       </div>
-      <a href="{{ project.data.featured_image }}" class="glightbox" data-gallery="portafolio">
-        <img src="{{ project.data.featured_image }}" alt="{{ project.data.title }}" loading="lazy">
+      <a href="{{ project.data.featured_image | url }}" class="glightbox" data-gallery="portafolio">
+        <img src="{{ project.data.featured_image | url }}" alt="{{ project.data.title }}" loading="lazy">
       </a>
     </figure>
     {% endfor %}

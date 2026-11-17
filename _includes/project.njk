@@ -6,14 +6,14 @@ layout: base.njk
   <div class="contenido-centrado">
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
-    <a href="index.html" class="btn-volver">← Volver a la galería</a>
+    <a href="{{ 'index.html' | url }}" class="btn-volver">← Volver a la galería</a>
   </div>
 
   <div class="fotos-grid">
     {% for foto in photos %}
     <figure class="foto-item">
-      <a href="{{ foto.imagen }}" class="glightbox" data-gallery="{{ slug }}">
-        <img src="{{ foto.imagen }}" alt="{{ foto.titulo | default(title) }}" loading="lazy">
+      <a href="{{ foto.imagen | url }}" class="glightbox" data-gallery="{{ slug }}">
+        <img src="{{ foto.imagen | url }}" alt="{{ foto.titulo | default(title) }}" loading="lazy">
       </a>
     </figure>
     {% endfor %}

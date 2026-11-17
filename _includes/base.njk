@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} – Paz Javiera</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ 'style.css' | url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/GLightbox/3.2.0/css/glightbox.min.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -17,11 +17,11 @@
     </button>
     <nav class="nav-menu">
       <button class="nav-close" aria-label="Cerrar menú">✕</button>
-      <a href="index.html">Obra</a>
-      <a href="biografia.html">Biografía</a>
-      <a href="exposiciones.html">Exposiciones</a>
-      <a href="proyectos.html">Proyectos</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="{{ 'index.html' | url }}">Obra</a>
+      <a href="{{ 'biografia.html' | url }}">Biografía</a>
+      <a href="{{ 'exposiciones.html' | url }}">Exposiciones</a>
+      <a href="{{ 'proyectos.html' | url }}">Proyectos</a>
+      <a href="{{ 'contacto.html' | url }}">Contacto</a>
     </nav>
   </header>
 
@@ -30,13 +30,13 @@
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/GLightbox/3.2.0/js/glightbox.min.js"></script>
-  <script src="script.js"></script>
+  <script src="{{ 'script.js' | url }}"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+            document.location.href = "{{ '/admin/' | url }}";
           });
         }
       });
