@@ -16,7 +16,9 @@
   <header class="header">
     <a href="{{ '/index.html' | url }}" class="logo-container">
       <span class="logo">Paz Javiera</span>
+      {% if page.url == '/' or page.url == '/index.html' %}
       <span class="logo-subtitle">Obra</span>
+      {% endif %}
     </a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
       <span class="hamburger"></span>
