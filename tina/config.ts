@@ -82,7 +82,8 @@ export default defineConfig({
       },
       {
         label: "Página de Inicio",
-        name: "pagina-inicio",
+        name: "pagina_inicio",
+        nameOverride: "pagina-inicio",
         path: "src/content/pagina-inicio",
         format: "md",
         fields: [
