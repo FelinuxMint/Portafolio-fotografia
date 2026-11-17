@@ -22,7 +22,8 @@ content:
         type: image
       - name: photos
         label: Fotos del proyecto
-        type: list
+        type: object
+        list: true
         fields:
           - name: imagen
             label: Imagen
