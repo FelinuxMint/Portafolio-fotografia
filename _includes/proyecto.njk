@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} – Paz Javiera</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/GLightbox/3.2.0/css/glightbox.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Paz Javiera</div>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="nav-menu">
+      <button class="nav-close" aria-label="Cerrar menú">✕</button>
+      <a href="/proyectos/">Obra</a>
+      <a href="/biografia/">Biografía</a>
+      <a href="/exposiciones/">Exposiciones</a>
+      <a href="/proyectos/">Proyectos</a>
+      <a href="/contacto/">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="proyecto-detalle">
+      <div class="contenido-centrado">
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+        <a href="/" class="btn-volver">← Volver a la galería</a>
+      </div>
+
+      <div class="fotos-grid">
+        {% for foto in photos %}
+        <figure class="foto-item">
+          <a href="{{ foto.imagen }}" class="glightbox" data-gallery="{{ slug }}">
+            <img src="{{ foto.imagen }}" alt="{{ foto.titulo }}" loading="lazy">
+          </a>
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/GLightbox/3.2.0/js/glightbox.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
