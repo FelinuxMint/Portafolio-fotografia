@@ -1,0 +1,38 @@
+media: images/uploads
+collections:
+  - name: proyectos
+    label: Proyectos
+    folder: _projects
+    create: true
+    path: slug
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, type: string }
+      - { name: slug, label: Slug (URL), type: string }
+      - { name: order, label: Orden en galería, type: number }
+      - { name: description, label: Descripción, type: text }
+      - { name: featured_image, label: Imagen destacada, type: image }
+      - name: photos
+        label: Fotos del proyecto
+        type: list
+        fields:
+          - { name: imagen, label: Imagen, type: image }
+          - { name: titulo, label: Título de la foto, type: string }
+  - name: biografia
+    label: Biografía
+    file: biografia.md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, type: string }
+  - name: contacto
+    label: Contacto
+    file: contacto.md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, type: string }
+  - name: exposiciones
+    label: Exposiciones
+    file: exposiciones.md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, type: string }
