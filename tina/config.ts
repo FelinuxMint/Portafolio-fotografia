@@ -8,6 +8,16 @@ export default defineConfig({
   branch: process.env.NEXT_PUBLIC_TINA_BRANCH || "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
+  media: {
+    loadCustomStore: async () => {
+      return {
+        upload: async () => ({}),
+        delete: async () => ({}),
+        get: async () => ({}),
+        list: async () => ({ docs: [], next: 0 }),
+      };
+    },
+  },
   /**
    * Para habilitar la edición visual localmente, Tina proporciona un componente <Sidebar />
    * que puedes agregar a tu aplicación para abrir el panel de Tina en el navegador.
