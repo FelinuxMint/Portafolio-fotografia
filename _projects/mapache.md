@@ -16,4 +16,6 @@ photos:
     titulo: Mapache 4
   - imagen: /images/uploads/foto5.jpg
     titulo: Mapache 5
+  - imagen: /images/uploads/my-take-on-edoras-home-of-the-horse-lords-v0-sj48vm6k6vlg1.webp
+    titulo: Mapache 6
 ---
