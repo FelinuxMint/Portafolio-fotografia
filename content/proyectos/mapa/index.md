@@ -2,7 +2,7 @@
 title: Mapache
 slug: mapache
 order: 1
-description: Serie fotográfica dedicada a capturar la mirada curiosa y el pelaje texturizado del mapache en entornos naturales y urbanos.
+descripcion: "Serie fotográfica dedicada a capturar la mirada curiosa y el pelaje texturizado del mapache en entornos naturales y urbanos."
 featuredImage: /images/uploads/foto1.jpg
 layout: proyecto.njk
 photos:

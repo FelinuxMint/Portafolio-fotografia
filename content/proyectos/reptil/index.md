@@ -2,7 +2,7 @@
 title: Reptil
 slug: reptil
 order: 2
-description: Exploración visual de las escamas, los ojos y los movimientos lentos de reptiles en su hábitat, entre la quietud y el instinto.
+descripcion: "Exploración visual de las escamas, los ojos y los movimientos lentos de reptiles en su hábitat, entre la quietud y el instinto."
 featuredImage: /images/uploads/foto2.jpg
 layout: proyecto.njk
 photos:

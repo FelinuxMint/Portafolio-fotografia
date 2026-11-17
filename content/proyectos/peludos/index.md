@@ -2,7 +2,7 @@
 title: Peludos
 slug: peludos
 order: 4
-description: Retratos de compañeros peludos: perros y gatos en momentos cotidianos, con énfasis en la ternura y la expresión de sus miradas.
+descripcion: "Retratos de compañeros peludos: perros y gatos en momentos cotidianos, con énfasis en la ternura y la expresión de sus miradas."
 featuredImage: /images/uploads/foto4.jpg
 layout: proyecto.njk
 photos:

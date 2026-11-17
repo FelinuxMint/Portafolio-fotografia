@@ -1,5 +1,5 @@
 ---
 title: Exposiciones
-content: Próximamente: información sobre exposiciones colectivas e individuales.
+cuerpo: "Próximamente: información sobre exposiciones colectivas e individuales."
 layout: pagina.njk
 ---

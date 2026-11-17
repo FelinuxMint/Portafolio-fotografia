@@ -2,7 +2,7 @@
 title: Planta
 slug: planta
 order: 3
-description: Estudio botánico a través de la lente, donde las hojas, los tallos y las flores revelan geometrías orgánicas y texturas vivas.
+descripcion: "Estudio botánico a través de la lente, donde las hojas, los tallos y las flores revelan geometrías orgánicas y texturas vivas."
 featuredImage: /images/uploads/foto3.jpg
 layout: proyecto.njk
 photos:

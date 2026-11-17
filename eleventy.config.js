@@ -1,6 +1,9 @@
 const eleventy = require('@11ty/eleventy');
 
 module.exports = function(eleventyConfig) {
+  // Ignorar carpeta legacy
+  eleventyConfig.ignores.add('legacy-eleventy');
+  
   // Copiar imágenes y assets estáticos
   eleventyConfig.addPassthroughCopy('images');
   
