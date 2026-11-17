@@ -50,7 +50,7 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "text",
+            type: "string",
             label: "Descripción",
             name: "description",
             required: false,
@@ -120,7 +120,7 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "text",
+            type: "string",
             label: "Contenido",
             name: "content",
             required: false,
@@ -140,7 +140,7 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "text",
+            type: "string",
             label: "Contenido",
             name: "content",
             required: false,
@@ -160,7 +160,7 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "text",
+            type: "string",
             label: "Contenido",
             name: "content",
             required: false,
