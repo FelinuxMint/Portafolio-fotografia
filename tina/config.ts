@@ -5,6 +5,15 @@ export default defineConfig({
    * Tu título de proyecto aparece en la barra de encabezado de Tina
    **/
   title: "Portafolio de Fotografía - Paz Javiera",
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH || "main",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
+  token: process.env.TINA_TOKEN || "",
+  media: {
+    tina: {
+      publicFolder: "public",
+      mediaRoot: "uploads",
+    },
+  },
   /**
    * Para habilitar la edición visual localmente, Tina proporciona un componente <Sidebar />
    * que puedes agregar a tu aplicación para abrir el panel de Tina en el navegador.
@@ -163,12 +172,4 @@ export default defineConfig({
       },
     ],
   },
-  /** 
-   * Tina está diseñado para funcionar con cualquier marco de trabajo. 
-   * Por defecto, usará el marco de trabajo que detecta en tu proyecto.
-   **/
-  /** 
-   * Para habilitar la edición visual, necesitas envolver tu aplicación con <TinaProvider />
-   * y proporcionar el client de Tina.
-   **/
 });
