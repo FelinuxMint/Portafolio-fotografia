@@ -5,7 +5,7 @@ import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <TinaProvider client={tinaClient}>
+    <TinaProvider cms={tinaClient as unknown as import("tinacms").TinaCMS}>
       <Component {...pageProps} />
     </TinaProvider>
   );

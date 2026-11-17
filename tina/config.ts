@@ -9,16 +9,6 @@ export default defineConfig({
     outputFolder: "admin",
     publicFolder: "public",
   },
-  media: {
-    loadCustomStore: async () => {
-      return {
-        upload: async () => ({}),
-        delete: async () => ({}),
-        get: async () => ({}),
-        list: async () => ({ docs: [], next: 0 }),
-      };
-    },
-  },
   sidebar: {
     position: "fixed",
     opacity: 1,

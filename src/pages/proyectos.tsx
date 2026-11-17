@@ -1,14 +1,14 @@
 import { tinaClient } from "../lib/tina";
 
 export default async function ProyectosPage() {
-  const projects = await tinaClient.getCollection("proyecto");
+  const projects = await (tinaClient as any).getCollection("proyecto");
 
   return (
     <main>
       <section className="contenido-centrado">
         <h2>Proyectos</h2>
         <p>Selección de proyectos fotográficos realizados en colaboración y de forma independiente.</p>
-      </div>
+      </section>
       <div className="fotos-grid">
         {projects?.docs.map((project: any) => (
           <figure key={project.slug} className="foto-item">

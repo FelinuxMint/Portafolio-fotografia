@@ -2,7 +2,7 @@ import { tinaClient } from "../lib/tina";
 
 export default async function HomePage() {
   // Obtener proyectos de TinaCMS
-  const projects = await tinaClient.getCollection("proyecto");
+  const projects = await (tinaClient as any).getCollection("proyecto");
 
   return (
     <main>

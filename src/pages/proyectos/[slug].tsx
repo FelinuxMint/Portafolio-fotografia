@@ -6,7 +6,7 @@ export default async function ProyectoPage({
 }: Readonly<{
   params: { slug: string };
 }>) {
-  const project = await tinaClient.getDocument("proyecto", params.slug);
+  const project = await (tinaClient as any).getDocument("proyecto", params.slug);
 
   if (!project) {
     notFound();
