@@ -8,8 +8,8 @@ module.exports = function (eleventyConfig) {
 
   // Ignorar archivos que no son páginas
   eleventyConfig.ignores.add("BITACORA.md");
+  eleventyConfig.ignores.add("AGENTS.md");
   eleventyConfig.ignores.add("img/boceto.md");
-  eleventyConfig.ignores.add("legacy-eleventy/**");
   eleventyConfig.ignores.add("legacy-eleventy/**");
 
   // Colección de proyectos desde _projects

@@ -1,7 +1,7 @@
 # AGENTS.md — Portafolio Fotografía
 
 ## Objetivo del proyecto
-Portafolio fotográfico mantenible para un usuario no técnico, priorizando estabilidad de build en Netlify, simplicidad operativa y bajo acoplamiento.
+Portafolio fotográfico mantenible para un usuario no técnico, priorizando simplicidad operativa, bajo acoplamiento y control local. *(Nota: El proyecto no utiliza ni utilizará Netlify como plataforma de despliegue).*
 
 ## Reglas de oro (No negociables)
 1. **Respaldo intacto:** Nunca modifiques, muevas ni borres `legacy-eleventy/`.
@@ -9,18 +9,21 @@ Portafolio fotográfico mantenible para un usuario no técnico, priorizando esta
 3. **Alcance acotado:** Resuelve exactamente lo pedido en el turno actual. No hagas refactorizaciones masivas ni cambios no solicitados.
 4. **Rama de trabajo aislada:** Realiza pruebas o migraciones en una rama nueva (ej. `feat/pages-cms-git`). Nunca hagas *push* forzado ni alteres la rama base anterior ni `legacy-eleventy/`.
 
-## Flujo con Pages CMS y Git
-- Prioriza configuración declarativa vía `.pages.yml` y *commits* limpios en la rama activa; no reintroduzcas dependencias ni flujos de TinaCMS.
-- Valida primero en pequeño (1 colección y pocas fotos de prueba) y comprueba el *build* local antes de escalar al resto del sitio.
+## Directrices de Desarrollo y Arquitectura
+- **Gestión de Contenido:** Pages CMS y Git (`.pages.yml`). Está estrictamente prohibido reintroducir dependencias o flujos de TinaCMS.
+- **Hosting / Despliegue:** Proyecto agnóstico de hosting (sin Netlify).
+- **Componentes Globales y Plantillas Nunjucks:** Si un elemento en layouts compartidos (`_includes/base.njk`) es exclusivo de una página (ej. subtítulo "Obra" en el logotipo), utilizar condicionales de Nunjucks (`{% if page.url == '/' or page.url == '/index.html' %}`) para evitar renderizarlo en páginas secundarias (Biografía, Contacto, etc.).
+- Valida siempre con compilación local (`npm run build`) antes de dar por buena una tarea.
+
 ## Eficiencia y eficacia de tokens
-- **Lectura dirigida:** Inspecciona primero solo los archivos y carpetas relevantes a la tarea (`package.json`, `netlify.toml`, rutas afectadas, configs). Evita recorrer carpetas pesadas, `node_modules`, `legacy-eleventy/` o archivos binarios/imágenes si no hace falta.
+- **Lectura dirigida:** Inspecciona primero solo los archivos y carpetas relevantes a la tarea (`package.json`, archivos de configuración, rutas afectadas). Evita recorrer carpetas pesadas, `node_modules`, `legacy-eleventy/` o archivos binarios/imágenes si no hace falta.
 - **Respuestas concisas:** Ve al grano. Resume hallazgos clave, rutas exactas y próximos pasos sin relleno.
 - **Cambios por incrementos:** Aplica cambios en bloques pequeños y verificables. Si algo falla, reporta el error exacto y la corrección mínima antes de seguir.
 
 ## Verificación mínima antes de cerrar una tarea
 - Indicar qué archivos se crearon, modificaron o eliminaron.
-- Ejecutar o indicar la comprobación correspondiente (build local, lint/typecheck o revisión de configuración).
-- Listar explícitamente cualquier paso manual pendiente en paneles externos (GitHub, Netlify, Cloudinary, CMS).
+- Ejecutar o indicar la comprobación correspondiente (build local).
+- Listar explícitamente cualquier paso manual pendiente en paneles externos (GitHub, Cloudinary, CMS).
 
 ## Gestión de tokens y límites de cuota (Free Tier — 250k TPM)
 Para evitar errores de `Quota exceeded` (límite de 250,000 tokens de entrada por minuto):
