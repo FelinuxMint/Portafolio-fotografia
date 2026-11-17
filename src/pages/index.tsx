@@ -1,8 +1,4 @@
-import { ImageResponse } from "@vercel/og";
-import Link from "next/link";
-import { tinaClient } from "@/lib/tina";
-
-export const dynamic = "force-dynamic";
+import { tinaClient } from "../lib/tina";
 
 export default async function HomePage() {
   // Obtener proyectos de TinaCMS

@@ -67,7 +67,7 @@ export default defineConfig({
             name: "photos",
             list: true,
             ui: {
-              itemProps: (item) => ({ label: item?.titulo || "Foto" }),
+              itemProps: (item: any) => ({ label: item?.titulo || "Foto" }),
             },
             fields: [
               {
